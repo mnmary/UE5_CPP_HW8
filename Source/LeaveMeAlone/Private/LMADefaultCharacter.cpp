@@ -260,8 +260,11 @@ void ALMADefaultCharacter::OnDeath()
 	{
 		Controller->ChangeState(NAME_Spectating);
 	}
+	
+	WeaponComponent->DestroyComponent();
+
 	UE_LOG(LogWeapon, Display, TEXT("IS DEAD"))
-	//WeaponComponent->DestroyComponent();
+	
 }
 
 void ALMADefaultCharacter::OnHealthChanged(float NewHealth)
